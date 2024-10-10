@@ -10,9 +10,6 @@ body {
     background-color: rgb(0, 192, 192);
     font-family: 'Poppins', sans-serif; /* Added Poppins font */
 }
-#temp{
-    margin-top:-20px;
-}
 
 /* Card container styling */
 .card {
@@ -29,6 +26,10 @@ body {
     margin-top: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
     padding: 20px; /* Inner padding for spacing */
+}
+#temp{
+    margin-bottom: 80px;
+    font-size: 3rem;
 }
 
 /* Title styling */
@@ -129,7 +130,8 @@ body {
     height: 160px;
 
     margin: 10px auto;
-    margin-bottom: 10px; /* Center the icons */
+    margin-bottom: -60px; /* Center the icons */
+
 }
 #f-humd, #f-speed {
     font-size: 1rem;
