@@ -33,7 +33,7 @@ async function checkweather(){
     }
     catch(error){
         console.error("enter a valid city name ");
-        loct.innerHTML="Name not valid!"
+        loct.innerHTML="Invalid Name!"
         setTimeout(()=>{
         srch.style.backgroundColor="red";
         loct.style.color="red"
