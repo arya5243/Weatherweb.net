@@ -1,342 +1,201 @@
-body{
-    margin:0;
-    padding:0;
+/* Basic reset for the body */
+body {
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
+    overflow: hidden;
     justify-content: center;
+    height: 100vh; /* Full viewport height */
     background-color: rgb(0, 192, 192);
-    font-family:sans-serif;
+    font-family: 'Poppins', sans-serif; /* Added Poppins font */
 }
 
-.card{
+/* Card container styling */
+.card {
     border: none;
-    height: 600px;
-    width: 300px;
-    border-radius:10px;
-    background-color:hsl(0, 0%, 95%);
-    margin-top: 2%;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction: column;
-    transition: ease-in 0.5s;
-}
-
-h1{
-    text-align:center;
-    font-weight: 700;
-    margin-left: 5px;
-}
-#int{
-    background-color:rgb(255, 255, 255);
-    width: 90%;
-    margin-left: 3px;
-    margin-top: 10px;
-    padding:10px;
-    border-radius: 5px;
-    background-color: b;
-    border: none;
-}
-#int::placeholder{
-    color: black;
-    font-weight: 600;
-    font-size: 1rem;
-}
-#work{
-    width: 90%;
-    height: fit fit-content;
-    margin-bottom: 44px;
-    transition: ease-in 1s;
-
-
-}
-#work button{
-    margin-left: 31%;
-    margin-top: 15px;
-    height: 40px;
-    width: 110px;
-    background-color:hsl(160, 100%, 42%);
-    border-radius:8px;
-    border:none;
-    font-weight: 700;
-    cursor:pointer;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-#work button:hover{
-    background-color: hsl(160, 100%, 50%);
-}
-.card img{
-    height: 50px;
+    max-width: 350px; /* Max width for larger screens */
+    width: 90%; /* Responsive width */
     border-radius: 10px;
-    margin-left: 15px;
-    margin-top: 13px;
-}
-.app-logo{
-
+    background-color: hsl(0, 0%, 95%);
     display: flex;
-    width: 90%;
-    margin-top: 10px;
-    height: 73px;
-
-}
-.new-div{
-    border:2px solid;
-    height: 360px;
-    margin-top:20px;
-    border-radius: 5px;
-    font-weight: 600;
-    width: 90%;
-    margin-top: -40px;
-    font-size: 2rem;
-    background: linear-gradient(150deg,#43c6ff,#4a4472);
-    text-align: center;
-    color: #fff;
-    font-family: 'poppins',sans-serif;
-    border: none;
-    padding:8px 5px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-
-
-}
-#cloud{
-    border: ;
-    height: 100px;
-    width: 100px;
-    margin-left: 34%;
-    margin-top: -70px;
+    flex-direction: column; /* Stack elements vertically */
     align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    transition: all 0.5s ease-in;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    padding: 20px; /* Inner padding for spacing */
 }
-.new-div h2{
-    margin-bottom: 12px;
-    margin-top: -2px;
 
+/* Title styling */
+#head{
+    text-align: center;
+    margin-left: 25px;
+    margin-bottom: -30px;
+    font-size: 2rem;
+    margin-right: 5px;
 }
-#humd{
-    height: 50px;
-    width: 50px;
-    margin-bottom: -0px;
-    position: absolute;
-    margin-top: 300px;
-    margin-left: -5px;
-}
-#f-humd{
-    margin-top: 330px;
-    position: absolute;
-    margin-left: 42px;
+
+/* Input field styling */
+#int {
+    background-color: #fff;
+    width: 100%; /* Full width of the card */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Subtle border for input */
     font-size: 1rem;
-}
-#speed{
-    height: 50px;
-    width: 50px;
-    margin-left: auto;
-    margin-top: 300px;
-    position: absolute;
+    margin-top: 10px; /* Space above the input */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Light shadow for input */
     
 }
-#f-speed{
-    position: absolute;
-    text-align:right;
-    margin-left: 180px;
-    margin-top: 325px;
-    font-size: 1rem;
+
+/* Placeholder style */
+#int::placeholder {
+    color: #000000; /* Placeholder color for better visibility */
+    font-weight: 600; /* Less bold for placeholder */
 }
-.fa{
-    font-size: 10px;
+#loct{
+    font-size: 3.5rem;
+    margin-top: -40px;
+    line-height: 2px;
+
 }
-#btn{
+
+/* Button container styling */
+#work {
+    width: 100%; /* Full width of the card */
+    margin-top: 15px;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center button */
+}
+#work button {
+    width: 120px; /* Increased button width for better usability */
+    height: 40px;
+    background-color: hsl(160, 100%, 42%);
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-left: 5px; /* Added transform for hover effect */
+}
+#work button:hover {
+    background-color: hsl(160, 100%, 50%);
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* Image styling inside the card */
+.card img {
+    height: 50px;
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin: 10px 0; /* Margin for spacing above and below the image */
+    object-fit: contain; /* Make sure the image fits within the space */
+}
+
+/* App logo styling */
+.app-logo {
     display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap:4px;
-    margin-left: 50%;
+    width: 90%;
+    height: auto; /* Auto height for better flexibility */
+    margin-top: 10px;
 }
-#btn i{
+
+/* Gradient div styling */
+.new-div {
+    width: 100%; /* Full width of the card */
+    height: 450px;
+    background: linear-gradient(150deg, #43c6ff, #4a4472);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cloud, humidity, and speed icons and text */
+#cloud{
+    height: 160px;
+
+    margin: 10px auto;
+    margin-bottom: 10px; /* Center the icons */
+}
+#f-humd, #f-speed {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Footer buttons styling */
+#btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+}
+#btn i {
     font-size: 20px;
 }
-
-@media only screen and (max-width:375px ){
-    .card{
-        width: 83%;
-        height:650px;
-        margin-top:20px;
-        border-radius: 8px;
-        background-color: #fff;
-
-    }
-    body{
-        background-color: #fff;
-        overflow-x: hidden;
-        overflow: hidden;
-    }
-    
-    .new-div{
-        height: 25rem;
-        width: 105%;
-    }
-    body{
-        background-color: #fff;
-        overflow-x: hidden;
-        overflow: hidden;
-    }
-    #speed{
-        margin-left: 180px;
-    }
-    #f-speed{
-        margin-left: 235px;
-        font-size: 1.3rem;
-    }
-    #f-humd{
-        font-size: 1.3rem;
-    }
-    #loct{
-        font-size: 3.4rem;
-    }
+#f-speed{
+    font-size: 2rem;
+    margin-top: -15px;
 }
-@media only screen and (width:390px ){
-    .card{
-        width: 83%;
-        height:100%;
-        margin-top: 20px;
-        border-radius: 8px;
-        background-color: #fff;
-        margin-top: 50px;
+#speed{
+    margin-top: -20px;
+}
+#f-humd{
+    font-size: 2rem;
+    margin-top: -5px;
+    text-align: center;
+}
+#humd{
+    margin-top: -16px;
+}
+.app-logo h1{
+    font-size: 2rem;
+}
+/* Responsive Styles */
 
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* Adjust title size */
     }
-    #int{
-        background-color:#ffffff;
-        border: 1px solid;
-        width: 90%;
+
+    .new-div {
+        font-size: 1.3rem; /* Adjust font size */
     }
-    h1{
-        margin-left: 15px;
-    }
-    .new-div{
-        height: 500px;
-        width: 105%;
-    }
-    body{
-        background-color: #fff;
-        overflow-x: hidden;
-        overflow: hidden;
-    }
-    #speed{
-        margin-left: 165px;
-    }
-    #f-speed{
-        margin-left: 220px;
-        font-size: 1.3rem;
-    }
-    #f-humd{
-        font-size: 1.3rem;
-    }
-    #loct{
-        font-size: 3.4rem;
+
+    #work button {
+        width: 100%; /* Full width on smaller screens */
     }
 }
 
-@media only screen and (min-width:390px ){
-    .card{
-        width: 83%;
-        height:100%;
-        margin-top: 20px;
-        border-radius: 8px;
-        background-color: #fff;
-        margin-top: 50px;
+/* Mobile screens */
+@media (max-width: 480px) {
+    .card {
+        width: 95%; /* Responsive width for mobile */
+    }
 
+    h1 {
+        font-size: 1.3rem; /* Smaller title size */
     }
-    #int{
-        background-color:#ffffff;
-        border: 1px solid;
-        width: 90%;
-    }
-    h1{
-        margin-left: 15px;
-    }
-    .new-div{
-        height: 500px;
-        width: 105%;
-    }
-    body{
-        background-color: #fff;
-        overflow-x: hidden;
-        overflow: hidden;
-    }
-    #speed{
-        margin-left: 165px;
-    }
-    #f-speed{
-        margin-left: 220px;
-        font-size: 1.3rem;
-    }
-    #f-humd{
-        font-size: 1.3rem;
-    }
-    #loct{
-        font-size: 3.4rem;
-    }
-    
-}
 
-@media only screen and (min-width:400px ){
-    .card{
-        width: 83%;
-        height:100%;
-        margin-top: 20px;
-        border-radius: 8px;
-        background-color: #fff;
-        margin-top: 50px;
+    #work button {
+        width: 90%; /* Responsive button size */
+        font-size: 1rem; /* Smaller font size */
+    }
 
-    }
-    #btn{
-        margin-left: 5000px;
-    }
-    #int{
-        background-color:#ffffff;
-        border: 1px solid;
-        width: 100%;
-        font-size: 1rem;
-        height: 30px;
-        align-items: center;
-        margin-left: -3%;
-
-    }
-    h1{
-        margin-left: 15px;
-    }
-    .new-div{
-        height: 570px;
-        width: 105%;
-    }
-    body{
-        background-color: #fff;
-        overflow-x: hidden;
-        overflow: hidden;
-    }
-    #speed{
-        margin-left: 190px;
-    }
-    #f-speed{
-        margin-left: 230px;
-        font-size: 2rem;
-        margin-top: 340px;
-        display: flex;
-        flex-direction: row;
-        line-height: 40px;
-    }
-    #f-humd{
-        font-size: 2rem;
-    }
-    #loct{
-        font-size: 3.7rem;
-    }
-    #cloud{
-        height: 150px;
-        width: 150px;
-        margin-top: -120px;
+    .new-div {
+        font-size: 1.2rem; /* Adjust font size */
+        padding: 8px; /* Reduce padding */
     }
 }
